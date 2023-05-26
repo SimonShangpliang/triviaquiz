@@ -14,12 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/textviewbackground" />
+
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:clearTaskOnLaunch="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleTask" />
         <activity
             android:name=".MainActivity2"
-            android:exported="true">
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

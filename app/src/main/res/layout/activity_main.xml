@@ -12,84 +12,90 @@
         android:id="@+id/videoView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="81dp"
         tools:layout_editor_absoluteY="35dp" />
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:layout_marginTop="44dp"
-        android:paddingTop="20dp"
-        android:text="TextView"
-
-        android:textAlignment="center"
+        android:layout_width="376dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/textviewbackbg"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+        android:padding="5dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/white"
-
         android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/rgroup"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@+id/videoView2" />
 
     <RadioGroup
         android:id="@+id/rgroup"
-        android:layout_width="match_parent"
+
+        android:layout_width="344dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:paddingHorizontal="20px"
-        android:background="#50FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/question"
-        app:layout_constraintTop_toBottomOf="@+id/question"
-      >
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question">
 
         <RadioButton
+            android:id="@+id/button1"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiobtnshape"
+            android:text="Button1"
             android:textColor="@color/white"
 
-            android:background="#20FFFFFF"
-
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button1"
             app:layout_constraintStart_toStartOf="@+id/question"
             app:layout_constraintTop_toBottomOf="@+id/question"></RadioButton>
 
         <RadioButton
-            android:background="#20FFFFFF"
-android:textColor="@color/white"
             android:id="@+id/button2"
             android:layout_width="match_parent"
-
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radiobtnshape"
             android:text="Button2"
+            android:textColor="@color/white"
 
             app:layout_constraintStart_toStartOf="@+id/button1"
             app:layout_constraintTop_toBottomOf="@+id/button1"></RadioButton>
 
         <RadioButton
-            android:textColor="@color/white"
-
-            android:background="#20FFFFFF"
-
             android:id="@+id/button3"
+
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/radiobtnshape"
             android:text="Button3"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/button2"
             app:layout_constraintTop_toBottomOf="@+id/button2"></RadioButton>
 
         <RadioButton
-            android:textColor="@color/white"
-
-            android:background="#20FFFFFF"
-
             android:id="@+id/button4"
+
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
+            android:background="@drawable/radiobtnshape"
+
             android:text="Button4"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="@+id/button3"
             app:layout_constraintTop_toBottomOf="@+id/button3"></RadioButton>
 
@@ -98,22 +104,27 @@ android:textColor="@color/white"
 
     <Button
         android:id="@+id/button"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
-        android:visibility="gone"
+
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgroup" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_width="157dp"
+        android:layout_height="74dp"
         android:layout_marginStart="160dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/baloo_bhai_2_medium"
         android:text="START"
-
+        android:textSize="34sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/check"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +134,10 @@ android:textColor="@color/white"
         android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="check"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+
+        android:text="CONFIRM"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -132,38 +146,85 @@ android:textColor="@color/white"
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgroup" />
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="410dp"
+        android:layout_width="200dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/textviewbackbg"
+        android:fontFamily="@font/baloo_bhai_2_medium"
         android:text="SCORE"
         android:textAlignment="center"
-        android:textSize="40dp"
         android:textColor="@color/white"
-        android:background="#50FFFFFF"
+        android:textSize="34sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/check"
+        app:layout_constraintEnd_toEndOf="@+id/check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgroup" />
+
+
+    <Button
+        android:id="@+id/newRound"
+        android:layout_width="185dp"
+        android:layout_height="172dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+        android:padding="20px"
+        android:text="NEW ROUND"
+        android:textSize="40dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoView2" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="133dp"
-        android:layout_height="58dp"
-        android:fontFamily="@font/anton"
-        android:text="PRESS NEXT\n
-FOR QUESTIONS"
-        android:visibility="gone"
-        android:textColor="@color/white"
+        android:id="@+id/time"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/scorelay"
+        android:fontFamily="@font/baloo_bhai_2_medium"
+
+        android:paddingLeft="20dp"
+        android:paddingTop="60dp"
+        android:paddingRight="20dp"
+        android:text="TIME"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/check"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/rgroup"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toTopOf="@+id/time"
+        app:srcCompat="@drawable/ic_time" />
+
+    <ImageView
+        android:id="@+id/trophy"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/videoView2"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toTopOf="@+id/score"
+        app:srcCompat="@drawable/trophy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

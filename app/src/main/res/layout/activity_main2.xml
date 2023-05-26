@@ -5,25 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10px"
-    tools:context=".MainActivity2">
-<VideoView
-    android:id="@+id/videoView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
 
-</VideoView>
+    tools:context=".MainActivity2">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </VideoView>
+
     <Spinner
 
         android:id="@+id/spinner"
         android:layout_width="311dp"
         android:layout_height="40dp"
-        android:entries="@array/Category"
-        android:padding="10px"
-        android:background="#50FFFFFF"
-
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/radiobtnshape"
+        android:entries="@array/Category"
+
+        android:padding="10px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -33,9 +35,9 @@
         android:id="@+id/spinner2"
         android:layout_width="311dp"
         android:layout_height="40dp"
-        android:background="#50FFFFFF"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/radiobtnshape"
 
         android:entries="@array/type"
         app:layout_constraintEnd_toEndOf="@+id/spinner"
@@ -47,7 +49,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:background="#50FFFFFF"
+        android:background="@drawable/radiobtnshape"
         android:entries="@array/difficulty"
         app:layout_constraintEnd_toEndOf="@+id/spinner2"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
@@ -56,8 +58,8 @@
         android:id="@+id/editTextText"
         android:layout_width="311dp"
         android:layout_height="41dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
-android:layout_marginTop="10dp"
         android:hint="Enter number of questions:(max 50)"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/spinner3"
@@ -66,10 +68,12 @@ android:layout_marginTop="10dp"
 
     <Button
         android:id="@+id/click"
+        style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DONE"
+        android:fontFamily="@font/baloo_bhai_2_medium"
 
+        android:text="DONE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -78,15 +82,16 @@ android:layout_marginTop="10dp"
         app:layout_constraintVertical_bias="0.448" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="WELCOME"
-        android:textColor="#FFFFFF"
-        android:textSize="40dp"
+        android:fontFamily="@font/barrio"
+        android:text="CHOOSE"
+        android:textColor="@color/white"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/click"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText" />
 

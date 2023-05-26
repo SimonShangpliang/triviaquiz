@@ -4,6 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
@@ -79,7 +81,20 @@ ithdiff=position
 
         val numberOfQ=findViewById<EditText>(R.id.editTextText)
 
-val clickme=findViewById<Button>(R.id.click)
+       val clickme=findViewById<Button>(R.id.click)
+        clickme.isEnabled = false
+
+        numberOfQ.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                clickme.isEnabled = s?.isNotEmpty() == true
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+        })
         clickme.setOnClickListener{
 val nq=numberOfQ.text.toString().toIntOrNull()
 
